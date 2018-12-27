@@ -4,7 +4,7 @@
 <div class="jumbotron">
   <h2 class="posttitle"><u>{{post_detail.title}}</u></h2>
   {% if post_detail.published_date %}
-    {{post_detail.published_date|date:"D M Y"}}
+    <span class="commentusername">posted by {{ post_detail.author}} - {{post_detail.published_date|date:"D M Y"}}</span>
   {% else %}
     <a class="btn btn-warning" href="{% url 'Blog:Post_Publish_Page' pk=post_detail.pk %}">Publish</a>
   {% endif %}
@@ -25,13 +25,27 @@
       {% for comment in post_detail.comments.all %}
         {% if user.is_authenticated or comment.approved_comment %}
             {% if comment.approved_comment %}
-              <p>{{ comment.created_date }}</p>
-              <p>{{ comment.text|safe|linebreaksbr}}</p>
-              <p>posted by: {{ comment.author }}</p>
-              <hr>
+            <div class="comments">
+              <span class="commentusername">{{ comment.author }}</span>
+              -
+              <span>{{ comment.created_date }}</span>
+              <br><br>
+              <p id="commentcontent11" >{{ comment.text|safe|linebreaksbr}}</p>
+              <br>
+            </div>
             {% endif %}
             {% if not comment.approved_comment %}
-            <!-- Add buttons for approving the comments or deleting it .  -->
+            <div class="comments">
+              <span class="commentusername">{{ comment.author }}</span>
+              -
+              <span>{{ comment.created_date }}</span>
+              <br><br>
+              <p id="commentcontent11" >{{ comment.text|safe|linebreaksbr}}</p>
+              <!-- Buttons for approving and deleting comments .  -->
+              <a href="{% url 'Blog:Comment_Approve_Page' pk=comment.pk %}"><span class="glyphicon glyphicon-ok"></span></a>
+              <a href="{% url 'Blog:Comment_Approve_Page' pk=comment.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
+              <br><br>
+            </div>
             {% endif%}
         {% endif%}
       {% empty %}

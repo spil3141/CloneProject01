@@ -15,6 +15,15 @@
   text-align: center;
 }
 
+.commentusername {
+  font-family: monospace;
+  font-size:1.5em;
+}
+#commentcontent11 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size:1em;
+}
+
 .postcontent{
   font-family: 'Montserrat';
   font-size: 1.5em;

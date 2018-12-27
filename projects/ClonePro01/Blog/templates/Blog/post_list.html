@@ -8,6 +8,8 @@
       <p>Published On: {{post.published_date|date:"D M Y"}}</p>
     {% endif%}
     <a href="{% url 'Blog:Post_Detail_Page' pk=post.pk %}">Comments: {{ post.approved_comments.count}}</a>
+  {% empty %}
+    No Posts
   {% endfor %}
 </div>
 
