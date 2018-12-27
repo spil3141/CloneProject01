@@ -6,6 +6,7 @@ appdirs==1.4.3
 appnope==0.1.0
 appscript==1.0.1
 argon2-cffi==18.3.0
+arrow==0.12.1
 asn1crypto==0.24.0
 astroid==2.0.4
 astropy==3.0.4
@@ -17,6 +18,7 @@ backcall==0.1.0
 backports.shutil-get-terminal-size==1.0.0
 bcrypt==3.1.5
 beautifulsoup4==4.6.3
+binaryornot==0.4.4
 bitarray==0.8.3
 bkcharts==0.2
 blaze==0.11.3
@@ -36,6 +38,7 @@ conda==4.5.11
 conda-build==3.15.1
 constantly==15.1.0
 contextlib2==0.5.5
+cookiecutter==1.6.0
 cryptography==2.3.1
 cycler==0.10.0
 Cython==0.28.5
@@ -48,11 +51,13 @@ distributed==1.23.1
 Django==2.0.1
 docutils==0.14
 entrypoints==0.2.3
+environ==1.0
 et-xmlfile==1.0.1
 fastcache==1.0.2
 filelock==3.0.8
 Flask==1.0.2
 Flask-Cors==3.0.6
+future==0.17.1
 gevent==1.3.6
 glob2==0.6
 gmpy2==2.0.8
@@ -74,6 +79,7 @@ itsdangerous==0.24
 jdcal==1.4
 jedi==0.12.1
 Jinja2==2.10
+jinja2-time==0.2.0
 jsonschema==2.6.0
 jupyter==1.0.0
 jupyter-client==5.2.3
@@ -126,6 +132,7 @@ Pillow==5.2.0
 pkginfo==1.4.2
 pluggy==0.7.1
 ply==3.11
+poyo==0.4.2
 prometheus-client==0.3.1
 prompt-toolkit==1.0.15
 psutil==5.4.7
@@ -195,6 +202,7 @@ urllib3==1.23
 wcwidth==0.1.7
 webencodings==0.5.1
 Werkzeug==0.14.1
+whichcraft==0.5.2
 widgetsnbextension==3.4.1
 wrapt==1.10.11
 xlrd==1.1.0
