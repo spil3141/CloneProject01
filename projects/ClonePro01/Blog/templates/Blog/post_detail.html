@@ -11,7 +11,7 @@
 
   <div class="postcontent">
     <hr>
-    <p >{{post_detail.text|safe|linebreaksbr}}</p>
+    <p class="loader" >{{post_detail.text|safe|linebreaksbr}}</p>
   </div>
   <div class="edit remove">
     {% if user.is_authenticated %}

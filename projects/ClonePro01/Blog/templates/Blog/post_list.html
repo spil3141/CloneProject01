@@ -1,7 +1,7 @@
 {% extends "Blog/base.html" %}
 
 {% block body_block %}
-<div class="centerstage jumbotron" >
+<!-- <div class="centerstage jumbotron" >
   {% for post in post_list %}
     <h2><a href="{% url 'Blog:Post_Detail_Page' pk=post.pk %}">{{post.title}}</a></h2>
     {% if post.published_date %}
@@ -11,6 +11,28 @@
   {% empty %}
     No Posts
   {% endfor %}
+
+  </div>-->
+
+<div class="container" align="center" style="width:600px;">
+  {% for post in post_list %}
+    <div class="card">
+      <div class="card-header">
+        Post
+      </div>
+      <div class="card-body">
+        <h5 class="card-title"><a href="{% url 'Blog:Post_Detail_Page' pk=post.pk %}">{{post.title}}</a></h5>
+        {% if post.published_date %}
+        <p class="card-text" >Published On: {{post.published_date|date:"D M Y"}}</p>
+        {% endif%}
+        <a class="btn btn-primary" href="{% url 'Blog:Post_Detail_Page' pk=post.pk %}">Comments: {{ post.approved_comments.count}}</a>
+      </div>
+    </div>
+  {% empty %}
+      No Posts
+  {% endfor %}
 </div>
+
+
 
 {% endblock %}
