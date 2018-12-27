@@ -1,4 +1,4 @@
-#!/Users/spil3141/Desktop/Desktop/.envs/blogproject/bin/python
+#!/Users/spil3141/Desktop/Desktop/.envs/blogproject/blogproject0./bin/python
 
 import sys
 import getopt
